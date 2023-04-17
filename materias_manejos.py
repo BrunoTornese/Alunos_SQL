@@ -58,7 +58,6 @@ class MateriaDAO:
             return cursor.rowcount
 
 
-
 if __name__ == '__main__':
     materias = MateriaDAO.leer_materias()
     for materia in materias:

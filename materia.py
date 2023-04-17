@@ -3,6 +3,7 @@ class Materia:
     def __init__(self, id_materia= None, nombre = None):
         self._nombre = nombre # Nombre de la materia.
         self._id_materia = id_materia # Identificador de la materia.
+        self.alumnos = []
 
     # Método que devuelve una representación en forma de cadena de la materia.
     def __str__(self):

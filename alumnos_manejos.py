@@ -53,7 +53,7 @@ if __name__ == '__main__':
     for alumno in alumno1:
       logging.debug(alumno)
 
-    #alumno = Alumno(2,'Julian', 'Marquez')
+    #alumno = Alumno(2,'Alfredo', 'Sanchez')
     #alumno_agregado = AlumnoDAO.insertar(alumno)
     #logging.debug(f'Alumno agregado: {alumno_agregado}')
 
