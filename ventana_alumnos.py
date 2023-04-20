@@ -79,13 +79,13 @@ def agregar_alumno():
         mostrar_alumnos()
 
     # Crear el botón para agregar el alumno
-    boton_agregar = tk.Button(ventana_agregar, text="Agregar", command=agregar)
+    boton_agregar = tk.Button(ventana_agregar, text="Agregar Alumno", command=agregar)
     boton_agregar.pack()
 
 
 
 def Eliminar_Alumno(alumno):
-    # Crear la ventana para eliminar un nuevo alumno
+    # Crear la ventana para eliminar un alumno
     ventana_eliminar = tk.Toplevel(ventana_principal)
     ventana_eliminar.title("Eliminar alumno")
 

@@ -9002,3 +9002,315 @@ HINT:  No operator matches the given name and argument types. You might need to 
 02:40:38 PM - DEBUG [cursor.py:23] Se hizo commit
 02:40:38 PM - DEBUG [conexion.py:56] Liberando un pool
 02:40:38 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001FEB42869B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:05 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:05 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:05 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001F66CCCF350>
+04:15:05 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:05 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:05 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:05 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:05 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:20 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:20 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:20 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE369B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:20 PM - DEBUG [alumnos_manejos.py:16] Agregando al alumno:  Nombre: Juan Apellido: Pelotas Alumno: None
+04:15:20 PM - DEBUG [alumnos_manejos.py:18] Valores a agregar: ('Juan', 'Pelotas')
+04:15:20 PM - DEBUG [alumnos_manejos.py:22] Alumno agregado:  Nombre: Juan Apellido: Pelotas Alumno: 0
+04:15:20 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:20 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:20 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:20 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE369B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:20 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:20 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:21 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE369B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:21 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:21 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:21 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:21 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE369B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:23 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:23 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:23 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:23 PM - DEBUG [alumnos_manejos.py:28] Alumno eliminado con id: 39
+04:15:23 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:23 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:23 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:23 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:23 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:23 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:23 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:23 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:23 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:23 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:23 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:28 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:28 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:28 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:28 PM - DEBUG [alumnos_manejos.py:49] Alumno actualizado:  Nombre: Pereira Apellido: Tornese Alumno: 38
+04:15:28 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:28 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:28 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:28 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:28 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:28 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:28 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:28 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:28 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:28 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:28 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:32 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:32 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:32 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:32 PM - DEBUG [alumnos_manejos.py:28] Alumno eliminado con id: 38
+04:15:32 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:32 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:32 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:32 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:32 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:32 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:32 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:32 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:32 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:32 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:32 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F66EE36790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:15:49 PM - DEBUG [cursor.py:11] Inicio del enter
+04:15:49 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:15:49 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000276E41EF350>
+04:15:49 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x00000276E63B6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:15:49 PM - DEBUG [cursor.py:17] Inicio del exit
+04:15:49 PM - DEBUG [cursor.py:23] Se hizo commit
+04:15:49 PM - DEBUG [conexion.py:56] Liberando un pool
+04:15:49 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x00000276E63B6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:16:19 PM - DEBUG [cursor.py:11] Inicio del enter
+04:16:19 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:16:19 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000024E671BF350>
+04:16:19 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x0000024E69336460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:16:19 PM - DEBUG [cursor.py:17] Inicio del exit
+04:16:19 PM - DEBUG [cursor.py:23] Se hizo commit
+04:16:19 PM - DEBUG [conexion.py:56] Liberando un pool
+04:16:19 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x0000024E69336460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:16:26 PM - DEBUG [cursor.py:11] Inicio del enter
+04:16:26 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:16:26 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x0000024E693369B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:16:26 PM - DEBUG [alumnos_manejos.py:16] Agregando al alumno:  Nombre: Bruno Apellido: Tornese Alumno: None
+04:16:26 PM - DEBUG [alumnos_manejos.py:18] Valores a agregar: ('Bruno', 'Tornese')
+04:16:26 PM - DEBUG [alumnos_manejos.py:22] Alumno agregado:  Nombre: Bruno Apellido: Tornese Alumno: 0
+04:16:26 PM - DEBUG [cursor.py:17] Inicio del exit
+04:16:26 PM - DEBUG [cursor.py:23] Se hizo commit
+04:16:26 PM - DEBUG [conexion.py:56] Liberando un pool
+04:16:26 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x0000024E693369B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:16:26 PM - DEBUG [cursor.py:11] Inicio del enter
+04:16:26 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:16:26 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x0000024E69336680; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:16:26 PM - DEBUG [cursor.py:17] Inicio del exit
+04:16:26 PM - DEBUG [cursor.py:23] Se hizo commit
+04:16:26 PM - DEBUG [conexion.py:56] Liberando un pool
+04:16:26 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x0000024E69336680; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+04:16:37 PM - DEBUG [cursor.py:11] Inicio del enter
+04:16:37 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+04:16:37 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000251CE67F350>
+04:16:37 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x00000251D07E6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+04:16:37 PM - DEBUG [cursor.py:17] Inicio del exit
+04:16:37 PM - DEBUG [cursor.py:23] Se hizo commit
+04:16:37 PM - DEBUG [conexion.py:56] Liberando un pool
+04:16:37 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x00000251D07E6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:31:43 PM - DEBUG [cursor.py:11] Inicio del enter
+07:31:43 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:31:43 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002861B69F950>
+07:31:43 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000002861B666460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:31:43 PM - DEBUG [cursor.py:17] Inicio del exit
+07:31:43 PM - DEBUG [cursor.py:23] Se hizo commit
+07:31:43 PM - DEBUG [conexion.py:56] Liberando un pool
+07:31:43 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000002861B666460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:32:01 PM - DEBUG [cursor.py:11] Inicio del enter
+07:32:01 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:32:02 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000002861B6669B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:32:02 PM - DEBUG [cursor.py:17] Inicio del exit
+07:32:02 PM - DEBUG [cursor.py:23] Se hizo commit
+07:32:02 PM - DEBUG [conexion.py:56] Liberando un pool
+07:32:02 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000002861B6669B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:32:02 PM - DEBUG [cursor.py:11] Inicio del enter
+07:32:02 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:32:02 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000002861B6669B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:32:02 PM - DEBUG [cursor.py:17] Inicio del exit
+07:32:02 PM - DEBUG [cursor.py:23] Se hizo commit
+07:32:02 PM - DEBUG [conexion.py:56] Liberando un pool
+07:32:02 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000002861B6669B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:32:10 PM - DEBUG [cursor.py:11] Inicio del enter
+07:32:10 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:32:10 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000002861B666240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:32:10 PM - DEBUG [materias_manejos.py:17] Agregando una materia
+07:32:10 PM - DEBUG [materias_manejos.py:20] Materia agregada Materia: Matematicas Id: None
+07:32:10 PM - DEBUG [cursor.py:17] Inicio del exit
+07:32:10 PM - DEBUG [cursor.py:23] Se hizo commit
+07:32:10 PM - DEBUG [conexion.py:56] Liberando un pool
+07:32:10 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000002861B666240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:32:10 PM - DEBUG [cursor.py:11] Inicio del enter
+07:32:10 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:32:10 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000002861B666240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:32:10 PM - DEBUG [cursor.py:17] Inicio del exit
+07:32:10 PM - DEBUG [cursor.py:23] Se hizo commit
+07:32:10 PM - DEBUG [conexion.py:56] Liberando un pool
+07:32:10 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000002861B666240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:33:08 PM - DEBUG [cursor.py:11] Inicio del enter
+07:33:08 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:33:08 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001F17284EC50>
+07:33:08 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F1728C6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:33:08 PM - DEBUG [cursor.py:17] Inicio del exit
+07:33:08 PM - DEBUG [cursor.py:23] Se hizo commit
+07:33:08 PM - DEBUG [conexion.py:56] Liberando un pool
+07:33:08 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F1728C6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:33:11 PM - DEBUG [cursor.py:11] Inicio del enter
+07:33:11 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:33:11 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F1728C69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:33:11 PM - DEBUG [alumnos_manejos.py:28] Alumno eliminado con id: 40
+07:33:11 PM - DEBUG [cursor.py:17] Inicio del exit
+07:33:11 PM - DEBUG [cursor.py:23] Se hizo commit
+07:33:11 PM - DEBUG [conexion.py:56] Liberando un pool
+07:33:11 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F1728C69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:33:11 PM - DEBUG [cursor.py:11] Inicio del enter
+07:33:11 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:33:12 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001F1728C69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:33:12 PM - DEBUG [cursor.py:17] Inicio del exit
+07:33:12 PM - DEBUG [cursor.py:23] Se hizo commit
+07:33:12 PM - DEBUG [conexion.py:56] Liberando un pool
+07:33:12 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001F1728C69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:34:00 PM - DEBUG [cursor.py:11] Inicio del enter
+07:34:00 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:34:00 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001A54552A490>
+07:34:00 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A545466460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:34:00 PM - DEBUG [cursor.py:17] Inicio del exit
+07:34:00 PM - DEBUG [cursor.py:23] Se hizo commit
+07:34:00 PM - DEBUG [conexion.py:56] Liberando un pool
+07:34:00 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A545466460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:39:46 PM - DEBUG [cursor.py:11] Inicio del enter
+07:39:46 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:39:46 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001749F9D2ED0>
+07:39:47 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001749F9D6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:39:47 PM - DEBUG [cursor.py:17] Inicio del exit
+07:39:47 PM - DEBUG [cursor.py:23] Se hizo commit
+07:39:47 PM - DEBUG [conexion.py:56] Liberando un pool
+07:39:47 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001749F9D6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:39:59 PM - DEBUG [cursor.py:11] Inicio del enter
+07:39:59 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:39:59 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000174DBEA2ED0>
+07:39:59 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x00000174DBEA6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:39:59 PM - DEBUG [cursor.py:17] Inicio del exit
+07:39:59 PM - DEBUG [cursor.py:23] Se hizo commit
+07:39:59 PM - DEBUG [conexion.py:56] Liberando un pool
+07:39:59 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x00000174DBEA6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:16 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:16 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:16 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000022029792ED0>
+07:40:16 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x0000022029796460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:16 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:16 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:16 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:16 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x0000022029796460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:20 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:20 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:20 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x00000220297969B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:20 PM - DEBUG [materias_manejos.py:49] Materia actualizada: Materia: Matematica Id: 7
+07:40:20 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:20 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:20 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:20 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x00000220297969B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:20 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:20 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:20 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x00000220297969B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:20 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:20 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:20 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:20 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x00000220297969B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:24 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:24 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:24 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x0000022029796240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:24 PM - DEBUG [materias_manejos.py:49] Materia actualizada: Materia: Matematicas Id: 7
+07:40:24 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:24 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:24 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:24 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x0000022029796240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:24 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:24 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:24 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x0000022029796240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:24 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:24 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:24 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:24 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x0000022029796240; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:29 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:29 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:29 PM - DEBUG [conexion.py:39] Se creo el pool de manera exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001A75ABD2ED0>
+07:40:29 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:29 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:29 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:29 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:29 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6460; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:31 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:31 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:31 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:31 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:31 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:31 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:31 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:31 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:31 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:31 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:31 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:31 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:31 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:31 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD69B0; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:33 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:33 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:33 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:33 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:33 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:33 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:33 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:33 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:33 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:33 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:33 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:33 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:33 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:33 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:34 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:34 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:34 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:34 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:34 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:34 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:34 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:34 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:34 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:34 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:34 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:34 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:34 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:34 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:36 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:36 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:36 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:36 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:36 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:36 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:36 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:36 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:36 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:36 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:36 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:36 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:36 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:36 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:37 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:37 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:37 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:37 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:37 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:37 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:37 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
+07:40:37 PM - DEBUG [cursor.py:11] Inicio del enter
+07:40:37 PM - DEBUG [conexion.py:49] Obteniendo conexión del pool...
+07:40:38 PM - DEBUG [conexion.py:51] Conexión obtenida del pool: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 0>
+07:40:38 PM - DEBUG [cursor.py:17] Inicio del exit
+07:40:38 PM - DEBUG [cursor.py:23] Se hizo commit
+07:40:38 PM - DEBUG [conexion.py:56] Liberando un pool
+07:40:38 PM - DEBUG [conexion.py:58] Pool liberado: <connection object at 0x000001A75ABD6790; dsn: 'user=postgres password=xxx dbname=alumnos host=127.0.0.1 port=5432', closed: 1>
