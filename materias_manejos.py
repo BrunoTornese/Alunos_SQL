@@ -8,6 +8,8 @@ _CAMBIAR = "UPDATE materia SET nombre_materia = %s WHERE id_materia = %s"  # Con
 _ELIMINAR = "DELETE FROM materia WHERE id_materia = %s"  # Consulta SQL para eliminar una materia
 
 class MateriaDAO:
+    _SELECCIONAR_MATERIA = "SELECT id_materia FROM materia WHERE nombre_materia = %s"
+
     # Función para agregar una materia a la base de datos
     @classmethod
     def crear_materia(cls, materia):
@@ -48,6 +50,7 @@ class MateriaDAO:
             return cursor.rowcount  # Se retorna la cantidad de filas afectadas por la consulta SQL
 
     # Función para eliminar una materia
+    @classmethod
     def eliminar_materia(cls, materia):
         with Cursor() as cursor:
             # Crear una tupla con el id de la materia a eliminar
@@ -56,6 +59,17 @@ class MateriaDAO:
             cursor.execute(_ELIMINAR, valores)
             # Devolver el número de filas afectadas por la eliminación
             return cursor.rowcount
+        
+    @classmethod
+    def obtener_id_materia(cls, nombre_materia): # Seleccionamos el id de la materia por su nombre
+        with Cursor() as cursor:
+            valores = (nombre_materia,)
+            cursor.execute(cls._SELECCIONAR_MATERIA, valores)
+            resultado = cursor.fetchone() # Recuperamos la primera fila de resultados
+            if resultado is None:
+                return None
+            else:
+                return resultado[0] # Devolvemos el primer elemento de la fila (el id)
 
 
 if __name__ == '__main__':

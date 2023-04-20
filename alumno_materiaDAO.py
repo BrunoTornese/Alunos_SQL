@@ -49,7 +49,8 @@ class Alumno_MateriaDAO:
     INNER JOIN materia ON alumnos_materias.id_materia = materia.id_materia
     WHERE materia.nombre_materia = %s
 """ # Selecciona los campos alumnos_materias.id, alumno.nombre, alumno.apellido y alumnos_materias.id_materia de la tabla alumnos_materias y los filtra por la columna nombre_materia de la tabla materia. Luego, une la tabla alumno mediante la columna id de la tabla alumnos_materias
-    _ELIMINAR_ASOCIACION = "DELETE FROM alumnos_materias WHERE id IN (SELECT id FROM alumno WHERE nombre = %s AND apellido = %s) AND id_materia IN (SELECT id FROM materia WHERE nombre_materia = %s)" # Sentencia para eliminar asociaciones
+    #_ELIMINAR_ASOCIACION = "DELETE FROM alumnos_materias WHERE alumno_id = (SELECT id FROM alumno WHERE nombre = %s AND apellido = %s) AND id_materia = (SELECT id FROM materia WHERE nombre_materia = %s);"# Sentencia para eliminar asociaciones
+    _ELIMINAR_ASOCIACION = "DELETE FROM alumnos_materias WHERE alumno_id = %s AND id_materia = %s;"
 
     @classmethod
     def ver_asociaciones(cls):
@@ -109,17 +110,15 @@ class Alumno_MateriaDAO:
                 logging.debug('No se encontraron alumnos')
                 
     @classmethod
-    def eliminar_asociacion(cls, alumno_nombre, alumno_apellido, materia_nombre): 
+    def eliminar_asociacion(cls, alumno_nombre, alumno_apellido, materia_nombre):
+        alumno_id = AlumnoDAO.obtener_id_alumno(alumno_nombre, alumno_apellido) # Obtiene el ID del alumno
+        materia_id = MateriaDAO.obtener_id_materia(materia_nombre)# Obtiene el ID de la materia
         with Cursor() as cursor:
-            logging.debug(f'Eliminando la asociación entre el alumno {alumno_nombre} {alumno_apellido} y la materia {materia_nombre}')# Registro de un mensaje de depuración para indicar que se está eliminando la asociación
-            valores = (alumno_nombre, alumno_apellido, materia_nombre)
-            cursor.execute(cls._ELIMINAR_ASOCIACION, valores) # Ejecución de la consulta de eliminación de asociación
-            return cursor.rowcount # Devolución del número de filas afectadas
-
-
-
-
-
+            logging.debug(f'Eliminando la asociación entre el alumno {alumno_nombre} {alumno_apellido} y la materia {materia_nombre}') # Ejecutar la consulta de eliminación de la asociación
+            valores = (alumno_id, materia_id)
+            cursor.execute(cls._ELIMINAR_ASOCIACION, valores)
+            return cursor.rowcount # Devolver el número de filas afectadas
+ 
 
 if __name__ == '__main__':
     asociaciones = Alumno_MateriaDAO.ver_asociaciones()
@@ -129,7 +128,7 @@ if __name__ == '__main__':
         for materia in data['materias']:
             print(f"- {materia['nombre_materia']} ({materia['id_materia']})")
 
-    #alumno1 = Alumno(id=19, nombre='Alfredo', apellido='Sanchez')
+    #alumno1 = Alumno(id=19, nombre='Alfredo', apellido='Geografia')
     #materia1 = Materia(5,'Matematicas intermedias')
     #Alumno_MateriaDAO.agregar(alumno1, materia1)
 
@@ -140,15 +139,7 @@ if __name__ == '__main__':
     #materia = Materia(nombre='Geografia')
     #Alumno_MateriaDAO.seleccionar_por_materia(materia)
 
-    #alumno = Alumno(id=19, nombre='Alfredo', apellido='Sanchez')
-    #eliminar_por_alumno = Alumno_MateriaDAO.eliminar_por_alumno(alumno)
-    
-
-    #alumno = Alumno(id=19, nombre='Alfredo', apellido='Sanchez')
-    #materia =Materia(id_materia= 4, nombre= 'Geografia')
-    #eliminar = Alumno_MateriaDAO.eliminar_asociacion(alumno, materia)
-    
-    #Alumno_MateriaDAO.eliminar_asociacion('Julian','Marquez','Geografia')
+    #Alumno_MateriaDAO.eliminar_asociacion('Carlos','Perez', 'Matematicas')
 
 
 
