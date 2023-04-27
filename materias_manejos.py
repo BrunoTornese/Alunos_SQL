@@ -72,10 +72,11 @@ class MateriaDAO:
                 return resultado[0] # Devolvemos el primer elemento de la fila (el id)
 
 
+
 if __name__ == '__main__':
     materias = MateriaDAO.leer_materias()
     for materia in materias:
-        logging.debug(materia.nombre)
+        logging.debug(f'Id = {materia.id_materia} Nombre = {materia.nombre}')
 
     #materia = Materia(1, 'Matematicas avanzadas')
    # materia_agregada = MateriaDAO.crear_materia(materia)

@@ -49,7 +49,6 @@ class Alumno_MateriaDAO:
     INNER JOIN materia ON alumnos_materias.id_materia = materia.id_materia
     WHERE materia.nombre_materia = %s
 """ # Selecciona los campos alumnos_materias.id, alumno.nombre, alumno.apellido y alumnos_materias.id_materia de la tabla alumnos_materias y los filtra por la columna nombre_materia de la tabla materia. Luego, une la tabla alumno mediante la columna id de la tabla alumnos_materias
-    #_ELIMINAR_ASOCIACION = "DELETE FROM alumnos_materias WHERE alumno_id = (SELECT id FROM alumno WHERE nombre = %s AND apellido = %s) AND id_materia = (SELECT id FROM materia WHERE nombre_materia = %s);"# Sentencia para eliminar asociaciones
     _ELIMINAR_ASOCIACION = "DELETE FROM alumnos_materias WHERE alumno_id = %s AND id_materia = %s;"
 
     @classmethod
@@ -63,7 +62,8 @@ class Alumno_MateriaDAO:
                     alumnos[id] = {'nombre_alumno': nombre_alumno, 'materias': []} 
                 alumnos[id]['materias'].append({'id_materia': id_materia, 'nombre_materia': nombre_materia})# Agregar la materia actual a la lista de materias del alumno
             return alumnos  # Retornar el diccionario de alumnos con sus respectivas materias
-     
+
+    
     @classmethod
     def agregar(cls, alumno, materia):
         with Cursor() as cursor:  # Usamos un contexto with para asegurarnos de que el cursor se cierre después de usarlo
@@ -128,8 +128,8 @@ if __name__ == '__main__':
         for materia in data['materias']:
             print(f"- {materia['nombre_materia']} ({materia['id_materia']})")
 
-    #alumno1 = Alumno(id=19, nombre='Alfredo', apellido='Geografia')
-    #materia1 = Materia(5,'Matematicas intermedias')
+    #alumno1 = Alumno(id=47, nombre='Bruno', apellido='T')
+    #materia1 = Materia(10,'Fisica')
     #Alumno_MateriaDAO.agregar(alumno1, materia1)
 
     #alumno_existente = Alumno(id=19, nombre='Alfredo', apellido='Sanchez')

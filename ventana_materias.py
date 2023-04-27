@@ -142,6 +142,7 @@ def Materia_Actualizar(materia):
 
 
 # Iniciar el bucle de eventos de tkinter
-ventana_principal.geometry('800x600')
-mostrar_materias()
-ventana_principal.mainloop()
+if __name__ == '__main__':
+    ventana_principal.geometry('800x600')
+    mostrar_materias()
+    ventana_principal.mainloop()

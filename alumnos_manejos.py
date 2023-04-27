@@ -51,6 +51,7 @@ class AlumnoDAO:
         
     @classmethod
     def obtener_id_alumno(cls, nombre, apellido): 
+        logging.debug("Ejecutando obtener_id_alumno()")
         with Cursor() as cursor: 
             valores = (nombre, apellido)
             cursor.execute(cls._SELECCIONAR_ID_ALUMNO, valores) # Seleccionamos el id del alumno por su nombre y apellido
@@ -59,7 +60,12 @@ class AlumnoDAO:
                 return None
             else:
                 return resultado[0] # Devolvemos el primer elemento de la fila (el id)
-
+        
+    @classmethod
+    def obtener_nombres_alumnos(self): # Método para obtener los nombres de los alumnos
+        alumnos = AlumnoDAO.seleccionar() # guarda en una variable los alumnos
+        nombres_alumnos = [alumno.nombre for alumno in alumnos] # guarda en una variable los nombres de los alumnos
+        return nombres_alumnos
 
                                 
 
