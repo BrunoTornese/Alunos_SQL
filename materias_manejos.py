@@ -9,6 +9,7 @@ _ELIMINAR = "DELETE FROM materia WHERE id_materia = %s"  # Consulta SQL para eli
 
 class MateriaDAO:
     _SELECCIONAR_MATERIA = "SELECT id_materia FROM materia WHERE nombre_materia = %s"
+    _SELECCIONAR_MATERIA_POR_ID = 'SELECT id_materia, nombre_materia FROM materia WHERE id_materia = %s'
 
     # Función para agregar una materia a la base de datos
     @classmethod
@@ -70,9 +71,24 @@ class MateriaDAO:
                 return None
             else:
                 return resultado[0] # Devolvemos el primer elemento de la fila (el id)
-
-
-
+    
+    @classmethod
+    def obtener_materia(cls,id_materia):
+        with Cursor() as cursor:
+            valores = (id_materia,)
+            logging.debug(f'{cls._SELECCIONAR_MATERIA_POR_ID} - Valores: {valores}')
+            cursor.execute(cls._SELECCIONAR_MATERIA_POR_ID, valores)
+            resultado = cursor.fetchone() # Recuperamos la primera fila de resultados
+            if resultado is None:
+                return None
+            else:
+                # Creamos un objeto Materia con los datos de la fila
+                materia = Materia(resultado[0], resultado[1])
+                # Establecemos el atributo id del objeto Materia
+                materia.id_materia = resultado[0]
+                logging.debug(f'Materia Obtenida: {materia}')
+                return materia
+    
 if __name__ == '__main__':
     materias = MateriaDAO.leer_materias()
     for materia in materias:

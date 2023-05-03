@@ -8,7 +8,7 @@ class AlumnoDAO:
     _ACTUALIZAR = 'UPDATE alumno SET  Nombre=%s, Apellido=%s WHERE id=%s '  # query para actualizar un registro de la tabla alumno
     _ELIMINAR= 'DELETE FROM alumno WHERE id=%s'  # query para eliminar un registro de la tabla alumno
     _SELECCIONAR_ID_ALUMNO = "SELECT id FROM alumno WHERE nombre = %s AND apellido = %s" # query para obtener un id de la tabla alumno
-
+    _SELECCIONAR_ALUMNO = 'SELECT id, nombre, apellido FROM alumno WHERE id = %s'
 
     @classmethod
     def insertar(cls, alumno):
@@ -51,9 +51,9 @@ class AlumnoDAO:
         
     @classmethod
     def obtener_id_alumno(cls, nombre, apellido): 
-        logging.debug("Ejecutando obtener_id_alumno()")
         with Cursor() as cursor: 
             valores = (nombre, apellido)
+            logging.debug(f'Alumno a buscar {valores}')
             cursor.execute(cls._SELECCIONAR_ID_ALUMNO, valores) # Seleccionamos el id del alumno por su nombre y apellido
             resultado = cursor.fetchone() # Recuperamos la primera fila de resultados
             if resultado is None:
@@ -62,10 +62,21 @@ class AlumnoDAO:
                 return resultado[0] # Devolvemos el primer elemento de la fila (el id)
         
     @classmethod
-    def obtener_nombres_alumnos(self): # Método para obtener los nombres de los alumnos
-        alumnos = AlumnoDAO.seleccionar() # guarda en una variable los alumnos
-        nombres_alumnos = [alumno.nombre for alumno in alumnos] # guarda en una variable los nombres de los alumnos
-        return nombres_alumnos
+    def obtener_alumno(cls, id_alumno):
+        with Cursor() as cursor:
+            valores = (id_alumno,)
+            cursor.execute(cls._SELECCIONAR_ALUMNO, valores)
+            resultado = cursor.fetchone() # Recuperamos la primera fila de resultados
+            if resultado is None:
+                return None
+            else:
+                # Creamos un objeto Alumno con los datos de la fila
+                alumno = Alumno(resultado[0], resultado[1], resultado[2])
+                # Establecemos el atributo id del objeto Alumno
+                logging.debug(f'Alumno Obtenido: {resultado}')
+                return alumno
+
+
 
                                 
 

@@ -53,24 +53,27 @@ class Alumno_MateriaDAO:
 
     @classmethod
     def ver_asociaciones(cls):
-        with Cursor() as cursor: # Establecer conexión a la base de datos y crear objeto Cursor
+        with Cursor() as cursor:# Establecer conexión a la base de datos y crear objeto Cursor
             cursor.execute(cls._VER_ASOCIACIONES) # Sentencia a ejecutar
-            alumnos = {}  # Inicializar un diccionario para almacenar los resultados de la consulta 
-            for registro in cursor.fetchall(): # Iterar sobre cada registro de la consulta
-                id, nombre_alumno, id_materia, nombre_materia = registro # Asignar los valores de cada columna a variables
-                if id not in alumnos: # Si el id del alumno no está en el diccionario, crear una nueva entrada
+            alumnos = {} # Lista vacia de alumnos
+            for registro in cursor.fetchall(): # Para cada registro 
+                id, nombre_alumno, id_materia, nombre_materia = registro # Toma todos sus atributos
+                if id not in alumnos:
                     alumnos[id] = {'nombre_alumno': nombre_alumno, 'materias': []} 
-                alumnos[id]['materias'].append({'id_materia': id_materia, 'nombre_materia': nombre_materia})# Agregar la materia actual a la lista de materias del alumno
-            return alumnos  # Retornar el diccionario de alumnos con sus respectivas materias
+                alumnos[id]['materias'].append({'id_materia': id_materia, 'nombre_materia': nombre_materia})
+            print(alumnos)  # imprimir el diccionario de alumnos con sus respectivas materias
+            return alumnos
 
-    
     @classmethod
-    def agregar(cls, alumno, materia):
-        with Cursor() as cursor:  # Usamos un contexto with para asegurarnos de que el cursor se cierre después de usarlo
-            valores = (alumno.id, materia.id_materia)# Creamos una tupla con los valores para la consulta SQL
-            cursor.execute(cls._AGREGAR, valores)  # Ejecutamos la consulta SQL con los valores
-            logging.debug(f"Alumno {alumno.nombre} asociado a materia {materia.nombre}")  # Escribimos un mensaje de registro en el archivo de log
-            return cursor.rowcount  # Devolvemos el número de filas afectadas por la consulta SQL
+    def agregar(cls, id_alumno, id_materia): #Funcion palra agregar asociacion a la base de datos
+        with Cursor() as cursor:# Establecer conexión a la base de datos y crear objeto Cursor
+            try:
+                valores = (id_alumno, id_materia)# valores para ejecutar la funcion
+                cursor.execute(cls._AGREGAR, valores)# Sentencia a ejecutar
+                return cursor.rowcount
+            except Exception as e:
+                print(f"Ocurrió un error: {e}")
+                return 0
     
     @classmethod
     def seleccionar_por_alumno(cls, alumno):
@@ -93,8 +96,9 @@ class Alumno_MateriaDAO:
                 if alumno_materia["materia"] is not None:  # Si se encontró una materia correspondiente al registro
                     logging.debug(f"Se encontró registro de materia {alumno_materia['materia'].nombre} para el alumno {alumno.nombre} {alumno.apellido}")
                     alumnos_materias.append(alumno_materia)  # Se agrega el diccionario a la lista de alumnos_materias
-            logging.debug(F'Materias encontradas: {alumnos_materias}')  # Se devuelve la lista de alumnos_materias resultante
-    
+                    logging.debug(F'Materias encontradas: {alumnos_materias}')
+            return alumnos_materias  # Se devuelve la lista de alumnos_materias resultante
+        
     @classmethod
     def seleccionar_por_materia(cls, materia):
         with Cursor() as cursor:
@@ -103,12 +107,23 @@ class Alumno_MateriaDAO:
             cursor.execute(cls._SELECCIONAR_POR_MATERIA, valores)  # Se ejecuta la consulta SQL correspondiente al método y se pasan los valores de la tupla como parámetros
             registros = cursor.fetchall()  # Se obtienen todos los registros resultantes de la consulta
             alumnos_materias = []  # Se define una lista vacía para almacenar los objetos de tipo alumno_materia
-            if registros: # si hay registros
-                for registro in registros:  # Se recorren los registros obtenidos
-                    logging.debug(f"Registro obtenido de la base de datos del alumno: {registro} cursando la materia")  # Se imprime el registro obtenido de la base de datos
-            else: # si no hay registros
-                logging.debug('No se encontraron alumnos')
-                
+            for registro in registros:
+                alumno_materia = {
+                    "alumno": None,
+                    "materia": materia
+                }
+                alumnos = AlumnoDAO.seleccionar()
+                for alumno in alumnos:
+                    if alumno.id == registro[0]:
+                        alumno_materia["alumno"] = alumno
+                        break
+                if alumno_materia["alumno"] is not None:
+                    logging.debug(f"Se encontro registro de un alumno {alumno_materia['alumno'].nombre} para la materia {materia.nombre}")
+                    alumnos_materias.append(alumno_materia)
+            logging.debug(f"Alumnos encontrados: {alumnos_materias}")
+            return alumnos_materias
+
+ 
     @classmethod
     def eliminar_asociacion(cls, alumno_nombre, alumno_apellido, materia_nombre):
         alumno_id = AlumnoDAO.obtener_id_alumno(alumno_nombre, alumno_apellido) # Obtiene el ID del alumno
@@ -128,9 +143,9 @@ if __name__ == '__main__':
         for materia in data['materias']:
             print(f"- {materia['nombre_materia']} ({materia['id_materia']})")
 
-    #alumno1 = Alumno(id=47, nombre='Bruno', apellido='T')
+    #alumno1 = Alumno(id=52, nombre='Bruno', apellido='Tornese')
     #materia1 = Materia(10,'Fisica')
-    #Alumno_MateriaDAO.agregar(alumno1, materia1)
+    #Alumno_MateriaDAO.agregar(alumno1.id, materia1.id_materia)
 
     #alumno_existente = Alumno(id=19, nombre='Alfredo', apellido='Sanchez')
     #materias = Alumno_MateriaDAO.seleccionar_por_alumno(alumno_existente)
@@ -139,7 +154,7 @@ if __name__ == '__main__':
     #materia = Materia(nombre='Geografia')
     #Alumno_MateriaDAO.seleccionar_por_materia(materia)
 
-    #Alumno_MateriaDAO.eliminar_asociacion('Carlos','Perez', 'Matematicas')
+    #Alumno_MateriaDAO.eliminar_asociacion('Bruno','Tornese', 'Fisica')
 
 
 
